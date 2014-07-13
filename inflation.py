@@ -2,7 +2,7 @@ from datetime import datetime
 import sys
 import json
 
-def calculateInflation():
+def main():
     data = loadJson()    
     inputYear = input('Enter year to calculate from: ')
     inputYear = int(inputYear)
@@ -19,4 +19,5 @@ def loadJson():
     data = json.loads(open('inflation-data.json').read())
     return data
  
-calculateInflation()
+if __name__ == '__main__':
+    main()
